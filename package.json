@@ -1,0 +1,12 @@
+{
+  "name": "com.mikanlab.advancement",
+  "displayName": "Advancement",
+  "version": "1.0.0",
+  "description": "Provide a buildin advancement system.",
+  "unity": "6000.0.25f1",
+  "dependencies": {},
+  "author": {
+    "name": "Hasekawa Mikan",
+    "email": "jenxnka@gamail.com"
+  }
+}
