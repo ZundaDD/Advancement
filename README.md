@@ -12,4 +12,6 @@
 
 ## 引用资源
 
+本项目引用了NewtonSoft.Json的官方仓库版本，可以从[发布地址](https://github.com/JamesNK/Newtonsoft.Json/releases/tag/13.0.3)中获取，请确保在项目中存在Newtonsoft.Json.dll文件即可。
+
 本项目引用的一切图标均来源于[FlatIcon](https://www.flaticon.com/ "免费图标素材")</br>

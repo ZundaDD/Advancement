@@ -17,25 +17,12 @@ namespace MikanLab.Advancement
     }
 
     /// <summary>
-    /// 进度节点，最基本的单位
+    /// Advancement集群，包含多个分区，分区之间允许相互引用
+    /// 可以设置从一个分区的路到另一个分区的路，例如用于剧情分歧
     /// </summary>
     [Serializable]
-    public class AdvancementNode
+    public class AdvancementCluster
     {
-        public List<int> SonNodes;                  //节点下游节点
-        public AdvancementAction Actions;     //节点达成行为
-        public AdvancementCondition Triggers;       //节点达成条件
-    }
-
-    [Serializable]
-    public class AdvancementCondition
-    {
-
-    }
-
-    [Serializable]
-    public class AdvancementAction
-    {
-
+        public List<Advancement> Clusters;
     }
 }

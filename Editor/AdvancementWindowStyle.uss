@@ -1,0 +1,7 @@
+VisualElement {}
+
+.error_box {
+	background-color:rgba(119,253,254,0.3);
+	border-left-width:5;
+	border-right-width:5
+}
