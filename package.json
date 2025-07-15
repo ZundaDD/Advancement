@@ -3,7 +3,7 @@
   "displayName": "Advancement",
   "version": "1.0.0",
   "description": "Provide a buildin advancement system.",
-  "unity": "6000.0.25f1",
+  "unity": "2025.6",
   "dependencies": {},
   "author": {
     "name": "Hasekawa Mikan",

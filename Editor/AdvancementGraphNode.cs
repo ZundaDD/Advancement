@@ -45,7 +45,7 @@ namespace MikanLab.Advancement
             description.focusable = true;
             
             description.AddToClassList("property_field");
-            extensionContainer.Add(description);
+            titleContainer.Add(description);
             description.BringToFront();
 
             PropertyField single = new();
