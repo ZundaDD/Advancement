@@ -26,25 +26,6 @@ namespace MikanLab.Advancement
 
         }
 
-        [MenuItem("Assets/Create/MikanLab/Advancement/Advancement", false)]
-        public static void CreateAdvTemplate()
-        {
-            string[] guids = AssetDatabase.FindAssets("Advancement.json");
-            if (guids.Length == 0)
-            {
-                Debug.LogWarning("Advancement.json.txt not found in asset database");
-                return;
-            }
-            string templatePath = AssetDatabase.GUIDToAssetPath(guids[0]);
-
-            ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
-                ScriptableObject.CreateInstance<CodeGenerator>(),
-                "Advancement.json",
-                EditorGUIUtility.IconContent("TextAsset Icon").image as Texture2D,
-                templatePath);
-
-        }
-
         public class CodeGenerator : UnityEditor.ProjectWindowCallback.EndNameEditAction
         {
             public override void Action(int instanceId, string pathName, string resourceFile)

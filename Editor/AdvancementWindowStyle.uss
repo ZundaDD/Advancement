@@ -1,7 +1,64 @@
 VisualElement {}
 
+.root_container {
+}
+
 .error_box {
 	background-color:rgba(119,253,254,0.3);
 	border-left-width:5;
 	border-right-width:5
+}
+
+.tool_bar {
+	flex-direction:row;
+}
+
+.section_view {
+	flex-direction:column;
+	flex-grow:1;
+}
+
+AdvancementGridBackground {
+	--grid-background-color: #282828;
+    --line-color: rgba(161, 199, 224, 0.1);
+    --thick-line-color: rgba(161, 199, 224, 0.3);
+}
+
+.rename-textfield {
+	margin-left:0px;
+	margin-right:0px;
+}
+
+.rename-textfield > TextInput {
+	padding-top:0px;
+	background-color:rgba(37,174,133,0.3);
+	padding-bottom:0px;
+	border-top-width:0;
+	border-bottom-width:0;
+}
+
+.button_scrollview {
+	flex-direction:column;
+	flex-grow:1;
+	border-width: 1px;
+	border-color:#4b4b4b;
+}
+
+.section_button {
+	margin-left:2px;
+	margin-right:2px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px;
+	border-top-color:#7BAEFA;
+	border-bottom-color:#7BAEFA;
+	border-left-color:#7BAEFA;
+	border-right-color:#7BAEFA;
+	border-left-width:1px;
+	border-right-width:1px;
+}
+
+.property_field {
+	focusable:true;
 }

@@ -1,5 +1,7 @@
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
 namespace MikanLab.Advancement
@@ -23,6 +25,23 @@ namespace MikanLab.Advancement
     [Serializable]
     public class AdvancementCluster
     {
+        [JsonConverter(typeof(TypeJsonConverter))]
+        public Type ActionEnumName;
         public List<Advancement> Clusters;
+
+        public class TypeJsonConverter : JsonConverter<Type>
+        {
+            public override void WriteJson(JsonWriter writer, Type value, JsonSerializer serializer)
+            {
+                writer.WriteValue(value?.AssemblyQualifiedName);
+            }
+
+            public override Type ReadJson(JsonReader reader, Type objectType, Type existingValue, bool hasExistingValue, JsonSerializer serializer)
+            {
+                string typeName = (string)reader.Value;
+                return string.IsNullOrEmpty(typeName) ? null : Type.GetType(typeName);
+            }
+        }
     }
+
 }
